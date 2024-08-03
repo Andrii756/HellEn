@@ -1,0 +1,93 @@
+
+    .advantages {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @media screen and (min-width:768px) {
+        padding-bottom: 80px;
+      }
+    }
+  .advantages__list {
+    width: 100%;
+  }
+
+        .advantages__item {
+          display: flex;
+          align-items: center;
+          
+        }
+  
+    .advantages__item--first::before {
+      content: '';
+      display: block;
+      width: 58px;
+      height: 60px;
+      background-image: url(/images/advantages/adv1.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+    }
+
+            .advantages__item--second::before {
+              content: '';
+              display: block;
+              width: 58px;
+              height: 60px;
+              background-image: url(/images/advantages/adv2.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              margin-right: 10px;
+            }
+
+                            .advantages__item--third::before {
+                              content: '';
+                              display: block;
+                              width: 58px;
+                              height: 60px;
+                              background-image: url(/images/advantages/adv3.svg);
+                              background-repeat: no-repeat;
+                              background-size: contain;
+                              margin-right: 10px;
+                            }
+
+        .advantages__description {
+          width: 209px;
+          @include font-style (500, 14px, 23px, 0.03em);
+    
+        }
+
+// 0px-767px 
+@media screen and (max-width:767px){
+    .advantages__item:not(:last-child) {
+  margin-bottom: 24px;
+  }
+
+}
+
+// TABLET  
+@media screen and (min-width:768px){
+.advantages__list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+    .advantages__description {
+      width: 135px;
+    }
+}
+
+// DESKTOP 
+@media screen and (min-width:1680px) {
+.advantages__item--first::before,
+.advantages__item--second::before,
+.advantages__item--third::before {
+    content: '';
+    width: 100px;
+      height: 100px;
+  }
+
+.advantages__description {
+  width: 366px;
+  margin-left: -20px;
+  @include font-style (700, 20px, 33px, 0.08em);
+  }
+}

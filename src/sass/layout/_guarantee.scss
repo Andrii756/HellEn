@@ -1,0 +1,100 @@
+.container.guarantee__container{
+    background-color: #F1F1F1;
+}
+
+.guarantee__title{
+    margin-bottom: 40px;
+    color: var(--main-color);
+    background-color: var(--optional-color);    
+    
+    @include font-style (800, 26px, 34px, 0.03em);
+    text-align: center; 
+}
+
+.guarantee__list {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    
+}
+
+.guarantee__item{
+    position: relative;
+    padding-left: 20px;
+    color: var(--extra-color);
+    
+    @include font-style (500, 12px, 20px, 0.03em);
+
+    &:not(:last-child){
+        margin-bottom: 24px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 14px;
+        height: 20px;
+        background-image: url("/images/icon-fire.svg");
+        background-size: contain;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        }
+
+    &:not(:last-child)::after {
+        position: absolute;
+        content: "";
+        border-left: 1px dashed var(--second-extra-color);
+        width: 1px;
+        bottom: -21px;
+        top: 23px;
+        left: 0;
+}
+
+}
+
+.guarantee__accent {
+    color: var(--accent-color);
+}
+
+@media screen and (min-width: 767.98px) {
+    .guarantee__list {
+        padding: 32px 58px 32px 87px;
+    }
+
+    .guarantee__item{
+        padding-left: 25px;
+
+        &:not(:last-child) {
+             margin-bottom: 20px;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 1679.98px) {
+    .guarantee__list {
+        padding: 60px 278px 60px 280px;
+    }
+
+    .guarantee__title {
+        @include font-style (800, 46px, 60px, 0.03em);
+    }
+
+    .guarantee__item {
+        padding-left: 30px;
+        @include font-style (500, 20px, 28px, 0.03em);
+    
+        &::before {
+            width: 22px;
+            height: 30px;
+
+    }
+}
+}

@@ -1,0 +1,222 @@
+.program {
+    background-color: var(--main-color);
+    position: relative;
+    padding-bottom: 145px;
+    background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(/images/program/lesson-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: right -10px bottom 50px;
+}
+.program {
+    padding-top: 40px;
+}
+.program__list {
+    display: flex;
+    text-align: left;
+}
+.program__title {
+    margin-bottom: 40px;
+    @include font-style (800, 20px, 26px, 0.03em);
+    color: var(--optional-color);
+}
+.program__term {
+    position: relative;
+    margin-bottom: 12px;
+
+    @include font-style (700, 14px, 28px, 0.08em);
+    text-transform: uppercase;
+    line-height: 10px;
+    
+    color: var(--optional-color);
+}
+.program__term::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -26px;
+    top: -2px;
+
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+
+    background: var(--accent-color);
+    transform: rotate(90deg);
+}
+.program__subject {
+    position: relative;
+    display: block;
+
+    margin-bottom: 16px;
+    padding-left: 18px;
+    
+    @include font-style (700, 12px, 20px, 0.08em);
+    color: var(--accent-color);
+}
+.program__subject::before {
+    content: '';
+
+    position: absolute;
+    top: 10px;
+        left: 1px;
+        height: 1px;
+        width: 12px;
+
+    background: var(--accent-color);
+}
+.program__item:last-child {
+    .program__order {
+        padding-top: 20px;
+    }
+    .program__subject::before {
+     
+        left: 1px;
+    }
+}
+.program__topic {
+    opacity: 0.5;
+
+    @include font-style (500, 12px, 20px, 0.08em);
+    color: var(--second-extra-color);
+}
+// mobile+tablet
+@media screen and (max-width: 1679.98px) {
+    .program__item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .program__list {
+        border-left: 1px solid var(--optional-color);
+        padding-left: 20px;
+        flex-direction: column;
+    }
+
+    .border-hidden::after{
+        content: '';
+        position: absolute;
+        display: block;
+        top: -12px;
+        left: -22px;
+        
+        height: 110px;
+        width: 4px;
+    
+        background-color: var(--main-color);
+        transform: rotate(180deg);
+    }
+}
+
+// only mobile
+@media screen and (max-width: 767.98px) {
+    .program__order-list:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .program__title {
+        text-align: center;
+    }
+    .program__container {
+        padding-left: 56px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .program {
+        padding-bottom: 180px;
+        background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(/images/program/lesson-tablet.jpg);
+        background-position: right 0 bottom 75px;
+    }
+
+    .program__title  {
+
+        @include font-style (800, 20px, 34px, 0.03em);
+    }
+    .program__term::before {
+        left: -114px;
+    }
+    .border-hidden::after {
+        left: -110px;
+        top: -12px;
+    }
+}
+// only tablet
+@media screen and (min-width: 768px) and (max-width: 1679.98px) {
+    .program__container {
+        padding-left: 88px;
+    }
+    .program {
+        padding-top: 60px;
+    }
+    .program__title {
+        margin-left: 22px;
+        }
+    .program__item:not(:last-child) {
+        .program__order {
+            display: flex;
+        }
+    }
+    
+    .program__list {
+        padding-left: 108px;
+    }
+
+    .program__order-list {
+        min-width: 140px;
+    }
+    .program__order-list:not(:last-child) {
+        margin-right: 32px;
+    }
+}
+
+// desktop
+@media screen and (min-width: 1680px) {
+    .program {
+        padding-bottom: 238px;
+        background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(/images/program/lesson-desktop.jpg);
+        background-position: left 0 bottom -130px;
+    }
+    .program {
+        padding-top: 80px;
+    }
+    .program__title {
+        @include font-style (800, 46px, 60px, 0.03em);
+        margin-bottom: 88px;
+    }
+
+    .program__term {
+        @include font-style (700, 20px, 28px, 0.08em);
+        line-height: 14px;
+        margin-bottom: 28px;
+    }
+    .program__term::before {
+        left: 0;
+        top: -54px;
+    }
+    .program__subject {
+        padding-left: 30px;
+        @include font-style (700, 20px, 34px, 0.08em);
+    }
+    .program__item:last-child {
+        .program__subject::before {
+            top: 12px;
+        }
+        .program__order {
+            padding-top: 45px;
+        }
+    }
+    .program__topic {
+        @include font-style (500, 18px, 28px, 0.08em);
+    }
+    .program__list {
+        justify-content: center;
+        border-top: 1px solid var(--optional-color);
+        padding-top: 48px;
+    }
+    .program__item:not(:last-child) {
+        margin-right: 74px;
+    }
+    .program__order-list:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    .program__subject::before {
+        top: 16px;
+        width: 20px;
+    }
+}

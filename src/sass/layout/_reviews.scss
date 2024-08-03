@@ -1,0 +1,262 @@
+.review {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.review__title {
+  text-align: center;
+  margin-bottom: 24px;
+  @include font-style (700, 20px, 26px, 0.03em);
+}
+
+.review__wrapper {
+  margin-bottom: 20px;
+}
+
+.review__author-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.review__vk {
+  display: block;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.review__discription {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.review__author {
+  margin-bottom: 16px;
+@include font-style (700, 14px, 17px, 0.08em);
+  color: var(--accent-color);
+}
+
+.review__education {
+  margin-bottom: 16px;
+  @include font-style (500, 12px, 20px, 0.08em);
+  color: var(--second-extra-color);
+}
+
+.review__comment {
+@include font-style (500, 12px, 20px, 0.03em);
+  color:var(--extra-color);
+}
+
+// Read More JS button
+
+.review__more {
+  display: none;
+}
+
+.show-more .review__more {
+  display: inline;
+}
+
+.show-more .review__dots {
+  display: none;
+}
+
+.review__btn {
+  padding: 0;
+  text-decoration: underline;
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.review__box {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review__item {
+  width: 54px;
+  height: 54px;
+}
+
+.review__list {
+  display: flex;
+}
+
+.review__pre {
+  margin-right: 22px;
+}
+
+.review__next {
+  margin-left: 22px;
+}
+
+@media screen and (max-width:767.98px) {
+  .review__item:not(:nth-child(3n)) {
+      margin-right: 12px;
+    }
+  .review__item:nth-last-child(-n + 4) {
+display: none;
+  }
+
+  .review__icon-tablet {
+    display: none;
+     }
+}
+
+@media screen and (min-width:768px) {
+    .review__title {
+        margin-bottom: 40px;
+        @include font-style (800, 26px, 34px, 0.03em);
+      }
+
+  .review__pre,
+  .review__next {
+    display: none;
+  }
+
+  .review__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   padding-top: 40px;
+   padding-bottom: 40px;
+      box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  }
+
+  .review__author-img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .review__vk {
+    display: block;
+    text-align: center;
+  }
+
+    .review__article {
+      display: flex;
+      align-items: flex-start;
+    }
+
+  .review__discription {
+    width: 412px;
+    text-align: start;
+    margin-left: 44px;
+    margin-right: 19px;
+  }
+
+    .review__wrap-img {
+      margin-left: 20px;
+    }
+
+  .review__author {
+    margin-bottom: 20px;
+    @include font-style (800, 20px, 24px, 0.08em);
+  }
+
+  .review__education {
+    margin-bottom: 20px;
+    text-align: start;
+    @include font-style (500, 12px, 14px, 0.08em);
+  }
+
+  .review__comment {
+    text-align: start;
+  }
+
+  .review__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .review__item:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
+@media screen and (min-width:1680px) {
+  .review {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .review__icon-mobile {
+    display: none;
+  }
+
+        .review__title {
+          text-align: center;
+          @include font-style (800, 46px, 60px, 0.03em);
+        }
+
+  .review__author-img {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .review__vk {
+    display: block;
+    text-align: center;
+  }
+
+  .review__article {
+    display: flex;
+    width: 1088px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 81px;
+    padding-right: 111px;
+    margin-left: 32px;
+    margin-right: 32px;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  }
+
+  .review__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  .review__discription {
+    width: 706px;
+  }
+
+  .review__wrap-img {
+    margin-left: 21px;
+  }
+
+  .review__author {
+    text-align: start;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include font-style (800, 30px, 37px, 0.08em);
+  }
+
+  .review__education {
+    margin-bottom: 20px;
+    width: 482px;
+    @include font-style (500, 14px, 17px, 0.08em);
+  }
+
+  .review__comment {
+    width: 706px;
+    @include font-style (500, 18px, 28px, 0.08em);
+  }
+
+  .review__user-img {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .review__img:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+

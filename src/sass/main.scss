@@ -1,0 +1,34 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+// @import './example';
+
+@import './utils/veriabless';
+@import './utils/visualy-hidden';
+@import './utils/mixins';
+
+@import './base/common';
+@import './base/container';
+
+@import './components/backdrop';
+@import './components/logo';
+@import './components/mobile-menu';
+@import './components/modal';
+@import './components/close-btn';
+@import './components/totop';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/advantages';
+@import './layout/problems';
+@import './layout/how-we-do';
+@import './layout/our-program';
+@import './layout/benefits';
+@import './layout/about';
+@import './layout/guarantee';
+@import './layout/reviews';
+@import './layout/contact-form';
+@import './layout/footer';
