@@ -2,9 +2,33 @@
     background-color: var(--main-color);
     position: relative;
     padding-bottom: 145px;
-    background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(/images/program/lesson-mobile.jpg);
+    // background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(/images/program/lesson-mobile.jpg);
     background-repeat: no-repeat;
     background-position: right -10px bottom 50px;
+}
+.container-program{
+    background-image: linear-gradient(rgba(17, 21, 24, 0.3), rgba(17, 21, 24, 0.3)), url(/images/program/lesson-mobile.jpg);
+    margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px;
+    }
+
+        @media screen and (min-width: 480px) {
+            .container {
+                width: 480px;
+            }
+        }
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .container {
+        width: 1680px;
+    }
 }
 .program {
     padding-top: 40px;
